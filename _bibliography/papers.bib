@@ -1,115 +1,569 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+@string{sfm = {Foundation Model}}
+@string{arch = {Architecture}}
+@string{eff = {Efficient Model}}
+@string{asr = {ASR}}
+@string{slu = {SLU}}
+@string{st = {ST}}
+@string{others = {Others}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+
+@inproceedings{peng-etal-2024-owsm,
+    abbr_venue={ACL},
+    abbr=sfm,
+    title = "{OWSM}-{CTC}: An Open Encoder-Only Speech Foundation Model for Speech Recognition, Translation, and Language Identification",
+    author = "Peng, Yifan  and
+      Sudo, Yui  and
+      Shakeel, Muhammad  and
+      Watanabe, Shinji",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL)",
+    year = "2024",
+    month= {8},
+    url = "https://aclanthology.org/2024.acl-long.549",
+    pdf = "https://aclanthology.org/2024.acl-long.549.pdf",
+    pages = "10192--10209",
+    abstract = "There has been an increasing interest in large speech models that can perform multiple tasks in a single model. Such models usually adopt an encoder-decoder or decoder-only architecture due to their popularity and good performance in many domains. However, autoregressive models can be slower during inference compared to non-autoregressive models and also have potential risks of hallucination. Though prior studies observed promising results of non-autoregressive models for certain tasks at small scales, it remains unclear if they can be scaled to speech-to-text generation in diverse languages and tasks. Inspired by the Open Whisper-style Speech Model (OWSM) project, we propose OWSM-CTC, a novel encoder-only speech foundation model based on Connectionist Temporal Classification (CTC). It is trained on 180k hours of public audio data for multilingual automatic speech recognition (ASR), speech translation (ST), and language identification (LID). Compared to encoder-decoder OWSM, our OWSM-CTC achieves competitive results on ASR and up to 24{\%} relative improvement on ST, while it is more robust and 3 to 4 times faster for inference. OWSM-CTC also improves the long-form ASR result with 20x speed-up.We will publicly release our code, pre-trained model, and training logs to promote open science in speech foundation models.",
+    selected={true},
+    poster="owsm-ctc-acl24.pdf",
+    google_scholar_id={_kc_bZDykSQC},
+    code="https://github.com/pyf98/espnet/tree/owsm-ctc",
+    website="https://huggingface.co/pyf98/owsm_ctc_v3.1_1B",
+    arxiv={2402.12654}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
+@article{Peng2024MSLMS2STAM,
+  abbr_venue={arXiv},
+  abbr=sfm,
+  title={MSLM-S2ST: A Multitask Speech Language Model for Textless Speech-to-Speech Translation with Speaker Style Preservation},
+  author={Yifan Peng and Ilia Kulikov and Yilin Yang and Sravya Popuri and Hui Lu and Changhan Wang and Hongyu Gong},
+  journal={ArXiv},
+  year={2024},
+  month={3},
   selected={true},
-  inspirehep_id = {3255}
+  pdf="https://arxiv.org/pdf/2403.12408",
+  arxiv="2403.12408"
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@inproceedings{Peng2024OWSMVB,
+  abbr_venue={INTERSPEECH},
+  abbr=sfm,
+  title={OWSM v3.1: Better and Faster Open Whisper-Style Speech Models based on E-Branchformer},
+  author={Yifan Peng and Jinchuan Tian and William Chen and Siddhant Arora and Brian Yan and Yui Sudo and Muhammad Shakeel and Kwanghee Choi and Jiatong Shi and Xuankai Chang and Jee-weon Jung and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2024},
+  month={9},
+  selected={true},
+  pdf="https://arxiv.org/pdf/2401.16658",
+  google_scholar_id={Zph67rFs4hoC},
+  poster="owsmv31-is24.pdf",
+  code="https://github.com/espnet/espnet",
+  website="https://www.wavlab.org/activities/2024/owsm/",
+  arxiv="2401.16658"
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@inproceedings{Peng2023DPHuBERTJD,
+  abbr_venue={INTERSPEECH},
+  abbr=eff,
+  title={DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models},
+  author={Yifan Peng and Yui Sudo and Muhammad Shakeel and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2023},
+  month={8},
+  selected={true},
+  code="https://github.com/pyf98/DPHuBERT",
+  google_scholar_id={LkGwnXOMwfcC},
+  pdf="https://arxiv.org/pdf/2305.17651",
+  arxiv="2305.17651"
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{Peng2023ReproducingWT,
+  abbr_venue={ASRU},
+  abbr=sfm,
+  title={Reproducing Whisper-Style Training Using An Open-Source Toolkit And Publicly Available Data},
+  author={Yifan Peng and Jinchuan Tian and Brian Yan and Dan Berrebbi and Xuankai Chang and Xinjian Li and Jiatong Shi and Siddhant Arora and William Chen and Roshan Sharma and Wangyou Zhang and Yui Sudo and Muhammad Shakeel and Jee-weon Jung and Soumi Maiti and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year={2023},
+  month={12},
+  pages={1-8},
+  selected={true},
+  arxiv="2309.13876",
+  pdf="https://arxiv.org/pdf/2309.13876",
+  website="https://www.wavlab.org/activities/2024/owsm/",
+  google_scholar_id={8k81kl-MbHgC}
 }
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+@inproceedings{Peng2022ASO,
+  abbr_venue={SLT},
+  abbr=slu,
+  title={A Study on the Integration of Pre-Trained SSL, ASR, LM and SLU Models for Spoken Language Understanding},
+  author={Yifan Peng* and Siddhant Arora* and Yosuke Higuchi and Yushi Ueda and Sujay S. Kumar and Karthik Ganesan and Siddharth Dalmia and Xuankai Chang and Shinji Watanabe},
+  booktitle={Proceedings of the 2022 IEEE Spoken Language Technology Workshop (SLT)},
+  year={2023},
+  month={1},
+  pages={406-413},
+  selected={true},
+  annotation={* Equal contribution},
+  arxiv="2211.05869",
+  pdf="https://arxiv.org/pdf/2211.05869",
+  google_scholar_id={IjCSPb-OGe4C}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{Peng2023I3DTA,
+  abbr_venue={ICASSP},
+  abbr=eff,
+  title={I3D: Transformer Architectures with Input-Dependent Dynamic Depth for Speech Recognition},
+  author={Yifan Peng and Jaesong Lee and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  month={6},
+  pages={1-5},
+  selected={true},
+  additional_info={<span style="color:red"> (Top 3% of all papers accepted)</span>},
+  pdf="https://arxiv.org/pdf/2303.07624",
+  arxiv="2303.07624",
+  google_scholar_id={W7OEmFMy1HYC},
+  award="Recognized as one of the top 3% of all papers accepted at the International Conference on Acoustics Speech and Signal Processing (ICASSP) 2023"
+}
+
+@inproceedings{Peng2023StructuredPO,
+  abbr_venue={ICASSP},
+  abbr=eff,
+  title={Structured Pruning of Self-Supervised Pre-Trained Models for Speech Recognition and Understanding},
+  author={Yifan Peng and Kwangyoun Kim and Felix Wu and Prashant Sridhar and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  month={6},
+  pages={1-5},
+  selected={true},
+  pdf="2302.14132",
+  arxiv="https://arxiv.org/pdf/2302.14132",
+  google_scholar_id="Y0pCki6q_DkC",
+  award="Recognized as one of the top 3% of all papers accepted at the International Conference on Acoustics Speech and Signal Processing (ICASSP) 2023",
+  additional_info={<span style="color:red"> (Top 3% of all papers accepted)</span>},
+}
+
+@inproceedings{pmlr-v162-peng22a,
+  abbr_venue={ICML},
+  abbr = arch,
+  title = 	 {Branchformer: Parallel {MLP}-Attention Architectures to Capture Local and Global Context for Speech Recognition and Understanding},
+  author =       {Peng, Yifan and Dalmia, Siddharth and Lane, Ian and Watanabe, Shinji},
+  booktitle = 	 {Proceedings of the International Conference on Machine Learning (ICML)},
+  pages = 	 {17627--17643},
+  year = 	 {2022},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {7},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/peng22a/peng22a.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/peng22a.html},
+  abstract = 	 {Conformer has proven to be effective in many speech processing tasks. It combines the benefits of extracting local dependencies using convolutions and global dependencies using self-attention. Inspired by this, we propose a more flexible, interpretable and customizable encoder alternative, Branchformer, with parallel branches for modeling various ranged dependencies in end-to-end speech processing. In each encoder layer, one branch employs self-attention or its variant to capture long-range dependencies, while the other branch utilizes an MLP module with convolutional gating (cgMLP) to extract local relationships. We conduct experiments on several speech recognition and spoken language understanding benchmarks. Results show that our model outperforms both Transformer and cgMLP. It also matches with or outperforms state-of-the-art results achieved by Conformer. Furthermore, we show various strategies to reduce computation thanks to the two-branch architecture, including the ability to have variable inference complexity in a single trained model. The weights learned for merging branches indicate how local and global dependencies are utilized in different layers, which benefits model designing.},
+  selected={true},
+  code="https://github.com/espnet/espnet",
+  google_scholar_id="2osOgNQ5qMEC",
+  slides="https://icml.cc/media/icml-2022/Slides/18226.pdf",
+  poster="https://icml.cc/media/PosterPDFs/ICML%202022/2adcfc3929e7c03fac3100d3ad51da26.png",
+  video="https://slideslive.com/38983369/branchformer-parallel-mlpattention-architectures-to-capture-local-and-global-context-for-speech-recognition-and-understanding"
+}
+
+@inproceedings{Peng2023ACS,
+  abbr_venue={INTERSPEECH},
+  abbr=arch,
+  title={A Comparative Study on E-Branchformer vs Conformer in Speech Recognition, Translation, and Understanding Tasks},
+  author={Yifan Peng and Kwangyoun Kim and Felix Wu and Brian Yan and Siddhant Arora and William Chen and Jiyang Tang and Suwon Shon and Prashant Sridhar and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2023},
+  month={8},
+  selected={true},
+  pdf={https://arxiv.org/pdf/2305.11073},
+  google_scholar_id="_FxGoFyzp5QC",
+  arxiv="2305.11073",
+  code="https://github.com/espnet/espnet",
+}
+
+@inproceedings{Peng2020MicrocalcificationLA,
+  abbr_venue={SPIE},
+  abbr=others,
+  title={Microcalcification localization and cluster detection using unsupervised convolutional autoencoders and structural similarity index},
+  author={Yifan Peng and Rui Hou and Yinhao Ren and Lars J. Grimm and Jeffrey R. Marks and E. Shelley Hwang and Joseph Y. Lo},
+  booktitle={Proceedings of the SPIE Medical Imaging 2020: Computer-Aided Diagnosis},
+  year={2020},
+  month={5},
+  selected={true},
+  award={Robert F. Wagner Best Student Paper Award Finalist at SPIE Medical Imaging 2020},
+  additional_info={<span style="color:red"> (Robert F. Wagner Best Student Paper Award Finalist)</span>},
+  html="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11314/1131403/Microcalcification-localization-and-cluster-detection-using-unsupervised-convolutional-autoencoders-and/10.1117/12.2551263.short#_=_"
+}
+
+@article{Peng2024AnES,
+  abbr_venue={arXiv},
+  abbr=sfm,
+  title={An Empirical Study of Speech Language Models for Prompt-Conditioned Speech Synthesis},
+  author={Yifan Peng and Ilia Kulikov and Yilin Yang and Sravya Popuri and Hui Lu and Changhan Wang and Hongyu Gong},
+  journal={ArXiv},
+  year={2024},
+  month={3},
+  volume={abs/2403.12402},
+  selected={true},
+  arxiv="2403.12402",
+  pdf="https://arxiv.org/pdf/2403.12402"
+}
+
+
+
+@inproceedings{Arora2023ASO,
+  abbr_venue={ICASSP},
+  abbr=slu,
+  title={A Study on the Integration of Pipeline and E2E SLU Systems for Spoken Semantic Parsing Toward Stop Quality Challenge},
+  author={Siddhant Arora and Hayato Futami and Shih-Lun Wu and Jessica Huynh and Yifan Peng and Yosuke Kashiwagi and Emiru Tsunoo and Brian Yan and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  pages={1-2},
+  month={6},
+}
+
+@inproceedings{Shakeel2024JointOO,
+  abbr_venue={ICASSPW},
+  abbr=asr,
+  title={Joint Optimization of Streaming and Non-Streaming Automatic Speech Recognition with Multi-Decoder and Knowledge Distillation},
+  author={Muhammad Shakeel and Yui Sudo and Yifan Peng and Shinji Watanabe},
+  booktitle={IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)},
+  year={2024},
+  pages={570-574},
+  month={4},
+}
+
+@inproceedings{Shakeel2024ContextualizedEA,
+  abbr_venue={INTERSPEECH},
+  abbr=asr,
+  title={Contextualized End-to-end Automatic Speech Recognition with Intermediate Biasing Loss},
+  author={Muhammad Shakeel and Yui Sudo and Yifan Peng and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2024},
+  month={9}
+}
+
+@inproceedings{Chen2023ReducingBT,
+  abbr_venue={INTERSPEECH},
+  abbr=sfm,
+  title={Reducing Barriers to Self-Supervised Learning: HuBERT Pre-training with Academic Compute},
+  author={William Chen and Xuankai Chang and Yifan Peng and Zhaoheng Ni and Soumi Maiti and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2023},
+  month={8},
+}
+
+@article{Wu2024SpeechComposerUM,
+  abbr_venue={arXiv},
+  abbr=sfm,
+  title={SpeechComposer: Unifying Multiple Speech Tasks with Prompt Composition},
+  author={Yihan Wu and Soumi Maiti and Yifan Peng and Wangyou Zhang and Chenda Li and Yuyue Wang and Xihua Wang and Shinji Watanabe and Ruihua Song},
+  journal={ArXiv},
+  year={2024},
+  month={1},
+  volume={abs/2401.18045},
+}
+
+@inproceedings{Maekaku2022AttentionWS,
+  abbr_venue={INTERSPEECH},
+  abbr=arch,
+  title={Attention Weight Smoothing Using Prior Distributions for Transformer-Based End-to-End ASR},
+  author={Takashi Maekaku and Yuya Fujita and Yifan Peng and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2022},
+  month={9},
+}
+
+@inproceedings{Kim2022EBranchformerBW,
+  abbr_venue={SLT},
+  abbr=arch,
+  title={E-Branchformer: Branchformer with Enhanced Merging for Speech Recognition},
+  author={Kwangyoun Kim and Felix Wu and Yifan Peng and Jing Pan and Prashant Sridhar and Kyu J. Han and Shinji Watanabe},
+  booktitle={Proceedings of the 2022 IEEE Spoken Language Technology Workshop (SLT)},
+  year={2023},
+  pages={84-91},
+  month={1},
+}
+
+@inproceedings{Chen2023ImprovingMM,
+  abbr_venue={ICASSP},
+  abbr=asr,
+  title={Improving Massively Multilingual ASR with Auxiliary CTC Objectives},
+  author={William Chen and Brian Yan and Jiatong Shi and Yifan Peng and Soumi Maiti and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  pages={1-5},
+  month={6},
+  award="Recognized as one of the top 3% of all papers accepted at the International Conference on Acoustics Speech and Signal Processing (ICASSP) 2023",
+  additional_info={<span style="color:red"> (Top 3% of all papers accepted)</span>},
+}
+
+@inproceedings{yan-etal-2023-espnet,
+    abbr_venue={ACL Demo},
+    abbr=st,
+    title = "{ESP}net-{ST}-v2: Multipurpose Spoken Language Translation Toolkit",
+    author = "Yan, Brian  and
+      Shi, Jiatong  and
+      Tang, Yun  and
+      Inaguma, Hirofumi  and
+      Peng, Yifan  and
+      Dalmia, Siddharth  and
+      Pol{\'a}k, Peter  and
+      Fernandes, Patrick  and
+      Berrebbi, Dan  and
+      Hayashi, Tomoki  and
+      Zhang, Xiaohui  and
+      Ni, Zhaoheng  and
+      Hira, Moto  and
+      Maiti, Soumi  and
+      Pino, Juan  and
+      Watanabe, Shinji",
+    booktitle = "Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL), System Demonstrations",
+    year = "2023",
+    month={7},
+    pdf = "https://aclanthology.org/2023.acl-demo.38.pdf",
+    url = "https://aclanthology.org/2023.acl-demo.38",
+    doi = "10.18653/v1/2023.acl-demo.38",
+    pages = "400--411",
+    abstract = "ESPnet-ST-v2 is a revamp of the open-source ESPnet-ST toolkit necessitated by the broadening interests of the spoken language translation community. ESPnet-ST-v2 supports 1) offline speech-to-text translation (ST), 2) simultaneous speech-to-text translation (SST), and 3) offline speech-to-speech translation (S2ST) {--} each task is supported with a wide variety of approaches, differentiating ESPnet-ST-v2 from other open source spoken language translation toolkits. This toolkit offers state-of-the-art architectures such as transducers, hybrid CTC/attention, multi-decoders with searchable intermediates, time-synchronous blockwise CTC/attention, Translatotron models, and direct discrete unit models. In this paper, we describe the overall design, example models for each task, and performance benchmarking behind ESPnet-ST-v2, which is publicly available at \url{https://github.com/espnet/espnet}.",
+}
+
+@inproceedings{Yan2022CMUsI2,
+  abbr_venue={IWSLT},
+  abbr=st,
+  title={CMU's IWSLT 2022 Dialect Speech Translation System},
+  author={Brian Yan and Patrick Fernandes and Siddharth Dalmia and Jiatong Shi and Yifan Peng and Dan Berrebbi and Xinyi Wang and Graham Neubig and Shinji Watanabe},
+  booktitle={International Workshop on Spoken Language Translation (IWSLT)},
+  year={2022},
+  month={5}
+}
+
+@inproceedings{Kashiwagi2023TensorDF,
+  abbr_venue={INTERSPEECH},
+  abbr=slu,
+  title={Tensor decomposition for minimization of E2E SLU model toward on-device processing},
+  author={Yosuke Kashiwagi and Siddhant Arora and Hayato Futami and Jessica Huynh and Shih-Lun Wu and Yifan Peng and Brian Yan and Emiru Tsunoo and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2023},
+  month={8},
+}
+
+@inproceedings{Sudo2023TimesynchronousOB,
+  abbr_venue={INTERSPEECH},
+  abbr=asr,
+  title={Time-synchronous one-pass Beam Search for Parallel Online and Offline Transducers with Dynamic Block Training},
+  author={Yui Sudo and Muhammad Shakeel and Yifan Peng and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2023},
+  month={8},
+}
+
+@inproceedings{Futami2023ThePS,
+  abbr_venue={ICASSP},
+  abbr=slu,
+  title={The Pipeline System of ASR and NLU with MLM-based data Augmentation Toward Stop Low-Resource Challenge},
+  author={Hayato Futami and Jessica Huynh and Siddhant Arora and Shih-Lun Wu and Yosuke Kashiwagi and Yifan Peng and Brian Yan and Emiru Tsunoo and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  month={6},
+  pages={1-2},
+}
+
+@inproceedings{Maiti2023VoxtLMUD,
+  abbr_venue={ICASSP},
+  abbr=sfm,
+  title={VoxtLM: Unified Decoder-Only Models for Consolidating Speech Recognition, Synthesis and Speech, Text Continuation Tasks},
+  author={Soumi Maiti and Yifan Peng and Shukjae Choi and Jee-weon Jung and Xuankai Chang and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2024},
+  month={4},
+  pages={13326-13330},
+}
+
+@inproceedings{Sudo2024ContextualizedAS,
+  abbr_venue={SLT},
+  abbr=asr,
+  title={Contextualized Automatic Speech Recognition with Dynamic Vocabulary},
+  author={Yui Sudo and Yosuke Fukumoto and Muhammad Shakeel and Yifan Peng and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE Spoken Language Technology Workshop (SLT)},
+  year={2024},
+  month={12},
+}
+
+@inproceedings{Sudo20244DAJ,
+  abbr_venue={arXiv},
+  abbr=asr,
+  title={4D ASR: Joint Beam Search Integrating CTC, Attention, Transducer, and Mask Predict Decoders},
+  author={Yui Sudo and Muhammad Shakeel and Yosuke Fukumoto and Brian Yan and Jiatong Shi and Yifan Peng and Shinji Watanabe},
+  booktitle={ArXiv},
+  year={2024},
+  month={6},
+  volume={abs/2406.02950},
+}
+
+@inproceedings{Chen2023JointPA,
+  abbr_venue={ASRU},
+  abbr=sfm,
+  title={Joint Prediction and Denoising for Large-Scale Multilingual Self-Supervised Learning},
+  author={William Chen and Jiatong Shi and Brian Yan and Dan Berrebbi and Wangyou Zhang and Yifan Peng and Xuankai Chang and Soumi Maiti and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year={2023},
+  month={12},
+  pages={1-8},
+}
+
+@inproceedings{Chen2024TowardsRS,
+  abbr_venue={arXiv},
+  abbr=sfm,
+  title={Towards Robust Speech Representation Learning for Thousands of Languages},
+  author={William Chen and Wangyou Zhang and Yifan Peng and Xinjian Li and Jinchuan Tian and Jiatong Shi and Xuankai Chang and Soumi Maiti and Karen Livescu and Shinji Watanabe},
+  booktitle={ArXiv},
+  year={2024},
+  month={6},
+  volume={abs/2407.00837},
+}
+
+@article{Hou2021AnomalyDO,
+  abbr_venue={TBME},
+  abbr=others,
+  title={Anomaly Detection of Calcifications in Mammography Based on 11,000 Negative Cases},
+  author={Rui Hou and Yifan Peng and Lars J. Grimm and Yinhao Ren and Maciej A. Mazurowski and Jeffrey R. Marks and Lorraine M. King and Carlo C. Maley and Eun-Sil Shelley Hwang and Joseph Y. Lo},
+  journal={IEEE Transactions on Biomedical Engineering},
+  year={2021},
+  month={11},
+  volume={69},
+  pages={1639-1650},
+}
+
+@inproceedings{Huang2023DynamicSuperbTA,
+  abbr_venue={ICASSP},
+  abbr=sfm,
+  title={Dynamic-Superb: Towards a Dynamic, Collaborative, and Comprehensive Instruction-Tuning Benchmark For Speech},
+  author={Chien-yu Huang and Ke-Han Lu and Shi Wang and Chi-Yuan Hsiao and Chun-Yi Kuan and Haibin Wu and Siddhant Arora and Kai-Wei Chang and Jiatong Shi and Yifan Peng and Roshan Sharma and Shinji Watanabe and Bhiksha Ramakrishnan and Shady Shehata and Hung-yi Lee},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2024},
+  month={4},
+  pages={12136-12140},
+}
+
+@inproceedings{Maiti2022SpeechlmscoreES,
+  abbr_venue={ICASSP},
+  abbr=sfm,
+  title={{SpeechLMScore}: Evaluating Speech Generation Using Speech Language Model},
+  author={Soumi Maiti and Yifan Peng and Takaaki Saeki and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  month={6},
+  pages={1-5},
+}
+
+@inproceedings{Arora2021ESPnetSLUAS,
+  abbr_venue={ICASSP},
+  abbr=slu,
+  title={ESPnet-SLU: Advancing Spoken Language Understanding Through ESPnet},
+  author={Siddhant Arora and Siddharth Dalmia and Pavel Denisov and Xuankai Chang and Yushi Ueda and Yifan Peng and Yuekai Zhang and Sujay S. Kumar and Karthik Ganesan and Brian Yan and Ngoc Thang Vu and Alan W. Black and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2022},
+  month={5},
+  pages={7167-7171},
+}
+
+@inproceedings{Tian2024OnTE,
+  abbr_venue={INTERSPEECH},
+  abbr=sfm,
+  title={On the Effects of Heterogeneous Data Sources on Speech-to-Text Foundation Models},
+  author={Jinchuan Tian and Yifan Peng and William Chen and Kwanghee Choi and Karen Livescu and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2024},
+  month={9},
+}
+
+@inproceedings{Arora2023UniverSLUUS,
+  abbr_venue={NAACL},
+  abbr=slu,
+  title={UniverSLU: Universal Spoken Language Understanding for Diverse Tasks with Natural Language Instructions},
+  author={Siddhant Arora and Hayato Futami and Jee-weon Jung and Yifan Peng and Roshan S. Sharma and Yosuke Kashiwagi and Emiru Tsunoo and Karen Livescu and Shinji Watanabe},
+  booktitle={Proceedings of the North American Chapter of the Association for Computational Linguistics (NAACL)},
+  year={2024},
+  month={6},
+}
+
+@inproceedings{Yan2023CMUsI2,
+  abbr_venue={IWSLT},
+  abbr=st,
+  title={CMU's IWSLT 2023 Simultaneous Speech Translation System},
+  author={Brian Yan and Jiatong Shi and Soumi Maiti and William Chen and Xinjian Li and Yifan Peng and Siddhant Arora and Shinji Watanabe},
+  booktitle={Proceedings of the International Workshop on Spoken Language Translation (IWSLT)},
+  year={2023},
+  month={7}
+}
+
+@inproceedings{Prabhu2024MultiConvformerEC,
+  abbr_venue={INTERSPEECH},
+  abbr=arch,
+  title={Multi-Convformer: Extending Conformer with Multiple Convolution Kernels},
+  author={Darshan Prabhu and Yifan Peng and Preethi Jyothi and Shinji Watanabe},
+  booktitle={Proceedings of the Annual Conference of the International Speech Communication Association (INTERSPEECH)},
+  year={2024},
+  month={9},
+}
+
+@inproceedings{Kashiwagi2023EBranchformerBasedES,
+  abbr_venue={ICASSP},
+  abbr=slu,
+  title={E-Branchformer-Based E2E SLU Toward Stop on-Device Challenge},
+  author={Yosuke Kashiwagi and Siddhant Arora and Hayato Futami and Jessica Huynh and Shih-Lun Wu and Yifan Peng and Brian Yan and Emiru Tsunoo and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2023},
+  month={6},
+  pages={1-2},
+}
+
+@inproceedings{Sudo2024ContextualizedAS,
+  abbr_venue={ICASSP},
+  abbr=asr,
+  title={Contextualized Automatic Speech Recognition With Attention-Based Bias Phrase Boosted Beam Search},
+  author={Yui Sudo and Muhammad Shakeel and Yosuke Fukumoto and Yifan Peng and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2024},
+  pages={10896-10900},
+  month={4}
+}
+
+@inproceedings{espnet-ez,
+  abbr_venue={SLT},
+  abbr=others,
+  title={{ESPnet-EZ: Python-only ESPnet for Easy Fine-tuning and Integration}},
+  author={Masao Someki and Kwanghee Choi and Siddhant Arora and William Chen and Samuele Cornell and Jionghao Han and Yifan Peng and Jiatong Shi and Vaibhav Srivastav and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE Spoken Language Technology Workshop (SLT)},
+  year={2024},
+  month={12},
+}
+
+@inproceedings{yihan-avsr-slt24,
+  abbr_venue={SLT},
+  abbr=asr,
+  title={{Robust Audiovisual Speech Recognition Models with Mixture-of-Experts}},
+  author={Yihan Wu and Yifan Peng and Yichen Lu and Xuankai Chang and Ruihua Song and Shinji Watanabe},
+  booktitle={Proceedings of the IEEE Spoken Language Technology Workshop (SLT)},
+  year={2024},
+  month={12},
+}
+
+@inproceedings{ShakeelMuhammad2023,
+  abbr=asr,
+  title={End-to-end integration of online and offline encoders using auxiliary losses for automatic speech recognition},
+  author={Muhammad Shakeel and Yui Sudo and Yifan Peng and Shinji Watanabe},
+  booktitle={人工知能学会第二種研究会資料},
+  volume={2023},
+  number={Challenge-063},
+  pages={03},
+  year={2023},
+  month={11},
+  doi={10.11517/jsaisigtwo.2023.Challenge-063_03},
+  pdf="https://www.jstage.jst.go.jp/article/jsaisigtwo/2023/Challenge-063/2023_03/_pdf/-char/ja",
 }

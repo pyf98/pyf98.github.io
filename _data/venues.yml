@@ -1,9 +1,26 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"ACL":
+  color: "#11d68b"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ACL Demo":
+  color: "#11d68b"
 
-"Vision":
-  color: "#009f36"
+"EMNLP":
+  color: "#11d68b"
+
+"NAACL":
+  color: "#11d68b"
+
+"ICML":
+  color: "#f79292"
+
+"ICASSP":
+  color: "#89f2fa"
+
+"INTERSPEECH":
+  color: "#89f2fa"
+
+"ASRU":
+  color: "#89f2fa"
+
+"SLT":
+  color: "#89f2fa"

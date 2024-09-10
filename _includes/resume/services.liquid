@@ -1,0 +1,22 @@
+<table class="table table-cv table-sm table-borderless table-responsive table-cv-map">
+  {% for content in data[1] %}
+    <tr>
+      <td class="p-1 pr-2 font-weight-bold">
+        <b>{{ content.role | capitalize }}</b>
+      </td>
+      <td class="p-1 pl-2 font-weight-light text">
+        <ul class="items">
+            {% for item in content.items %}
+              <li>
+                {% if item.url %}
+                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+                {% else %}
+                  {{ item.name }}
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+      </td>
+    </tr>
+  {% endfor %}
+</table>

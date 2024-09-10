@@ -3,6 +3,28 @@
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
+      {%- if entry.abbr_venue -%}
+        {%- if site.data.venues[entry.abbr_venue] -%}
+          {% assign venue_style = null %}
+          {% if site.data.venues[entry.abbr_venue].color != blank %}
+            {% assign venue_style = site.data.venues[entry.abbr_venue].color | prepend: 'style="background-color:' | append: '"' %}
+          {%- endif -%}
+          <abbr
+            class="badge rounded w-100"
+            {% if venue_style %}
+              {{ venue_style }}
+            {% endif -%}
+          >
+            {% if site.data.venues[entry.abbr_venue].url %}
+              <a href="{{ site.data.venues[entry.abbr_venue].url }}">{{ entry.abbr_venue }}</a>
+            {% else %}
+              <div>{{- entry.abbr_venue -}}</div>
+            {% endif %}
+          </abbr>
+        {% else %}
+          <abbr class="badge rounded w-100">{{ entry.abbr_venue }}</abbr>
+        {% endif %}
+      {% endif %}
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
@@ -82,10 +104,10 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <em><b>
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </b></em>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">

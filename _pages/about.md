@@ -1,25 +1,31 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <strong>PhD Candidate, Carnegie Mellon University</strong>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info: 
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+⭐ <span style="color: red; font-weight: bold;">I'm actively seeking full-time research scientist positions in speech and language processing (expected to start in Summer 2025)</span> ⭐
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am a final-year Ph.D. student in the [Department of Electrical and Computer Engineering](https://www.ece.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/). I am fortunate to be supervised by Prof. [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe) (Sep 2021 - now) and Prof. [Ian Lane](https://nlp.ucsc.edu/people/nlp-faculty/ian-lane/) (Aug 2020 - Aug 2021; now at UC, Santa Cruz). I received my bachelor’s degree from the [Department of Electronic Engineering](https://www.ee.tsinghua.edu.cn/en/) at [Tsinghua University](https://www.tsinghua.edu.cn/en/) in 2020.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+In Summer 2024, I was an AI Research Intern at [NVIDIA](https://www.nvidia.com/en-us/) NeMo, where I worked on joint speech-text language models. In Summer 2023, I was a research scientist intern at [Meta AI](https://ai.meta.com/) FAIR and worked on speech language models for voice-preserved textless speech-to-speech translation. In Summer 2022, I worked as a speech recognition intern at [ASAPP](https://www.asapp.com/) about speech model compression.
+
+My research area is speech and language processing. My Ph.D. thesis is to develop effective and efficient open speech foundation models. I have led the project of [Open Whisper-style Speech Models (OWSM)](https://www.wavlab.org/activities/2024/owsm/) at [CMU WAVLab](https://www.wavlab.org/), developing the first large-scale, fully open speech foundation model from academia. Recently, I am also interested in integrating speech capabilities into large language models.
+
+Throughout my Ph.D. program, I have been the primary contributor to several major projects:
+
+- Novel speech encoder architecture: [Branchformer (ICML’22)](https://proceedings.mlr.press/v162/peng22a.html), [E-Branchformer vs Conformer (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23b_interspeech.pdf)
+- Speech model compression: [I3D (ICASSP’23 Top 3%)](https://ieeexplore.ieee.org/abstract/document/10096662), [HJ-Pruning (ICASSP’23 Top 3%)](https://ieeexplore.ieee.org/abstract/document/10095780), [DPHuBERT (INTERSPEECH’23)](https://www.isca-archive.org/interspeech_2023/peng23c_interspeech.html)
+- Open speech foundation models: [OWSM (ASRU’23)](https://ieeexplore.ieee.org/abstract/document/10389676), [OWSM v3.1 (INTERSPEECH’24)](https://arxiv.org/abs/2401.16658), [OWSM-CTC (ACL’24)](https://aclanthology.org/2024.acl-long.549/)
+- Speech language models: [SpeechLM analysis](https://arxiv.org/abs/2403.12402), [MSLM-S2ST](https://arxiv.org/abs/2403.12408), and more updates to follow.
