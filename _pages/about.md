@@ -28,4 +28,4 @@ Throughout my Ph.D. program, I have published first-authored papers in top-tier 
 - Novel speech encoder architecture: [Branchformer (ICML’22)](https://proceedings.mlr.press/v162/peng22a.html), [E-Branchformer vs Conformer (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23b_interspeech.pdf)
 - Speech model compression: [I3D (ICASSP’23 Top 3%)](https://arxiv.org/abs/2303.07624), [HJ-Pruning (ICASSP’23 Top 3%)](https://arxiv.org/abs/2302.14132), [DPHuBERT (INTERSPEECH’23)](https://www.isca-archive.org/interspeech_2023/peng23c_interspeech.html)
 - Open speech foundation models: [OWSM (ASRU’23)](https://arxiv.org/abs/2309.13876), [OWSM v3.1 (INTERSPEECH’24)](https://arxiv.org/abs/2401.16658), [OWSM-CTC (ACL’24)](https://aclanthology.org/2024.acl-long.549/)
-- Speech language models: [SpeechLM analysis](https://arxiv.org/abs/2403.12402), [MSLM-S2ST](https://arxiv.org/abs/2403.12408), and more updates to follow.
+- Speech language models: [SpeechLM analysis](https://arxiv.org/abs/2403.12402), [MSLM-S2ST](https://arxiv.org/abs/2403.12408), [VoiceTextBlender](https://arxiv.org/abs/2410.17485), and more to follow
