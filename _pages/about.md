@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-⭐ <span style="color: red; font-weight: bold;">Now seeking full-time positions in speech and language processing (expected to start in Summer 2025)</span> ⭐
+<!-- ⭐ <span style="color: red; font-weight: bold;">Now seeking full-time positions in speech and language processing (expected to start in Summer 2025)</span> ⭐ -->
 
 I am a final-year Ph.D. student in the [Department of Electrical and Computer Engineering](https://www.ece.cmu.edu/) at [Carnegie Mellon University](https://www.cmu.edu/). I am fortunate to be supervised by Prof. [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe) (Sep 2021 - now) and Prof. [Ian Lane](https://nlp.ucsc.edu/people/nlp-faculty/ian-lane/) (Aug 2020 - Aug 2021; now at UC, Santa Cruz). I received my bachelor’s degree from the [Department of Electronic Engineering](https://www.ee.tsinghua.edu.cn/en/) at [Tsinghua University](https://www.tsinghua.edu.cn/en/) in 2020.
 
