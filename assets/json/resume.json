@@ -87,13 +87,13 @@
     {
       "role": "Conference reviewer",
       "items": [
-        {"name": "ICASSP: 2023, 2024"},
+        {"name": "ICASSP: 2023, 2024, 2025"},
         {"name": "INTERSPEECH: 2024"},
         {"name": "SLT: 2022, 2024"},
         {"name": "ASRU: 2023"},
         {"name": "ACL: 2024 (ARR Feb 2024)"},
         {"name": "EMNLP: 2023, 2024 (ARR Jun 2024)"},
-        {"name": "NAACL: 2024 (ARR Dec 2023)"},
+        {"name": "NAACL: 2024 (ARR Dec 2023), 2025 (ARR Oct 2024)"},
         {"name": "SynData4GenAI: 2024"},
         {"name": "WiNLP: 2024"}
       ]
@@ -101,8 +101,9 @@
     {
       "role": "Journal reviewer",
       "items": [
-        {"name": "Speech Communication", "url": "https://www.sciencedirect.com/journal/speech-communication"},
-        {"name": "IEEE/ACM Transactions on Audio, Speech, and Language Processing", "url": "https://signalprocessingsociety.org/publications-resources/ieeeacm-transactions-audio-speech-and-language-processing"}
+        {"name": "IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)", "url": "https://signalprocessingsociety.org/publications-resources/ieeeacm-transactions-audio-speech-and-language-processing"},
+        {"name": "Computer Speech & Language (CSL)", "url": "https://www.sciencedirect.com/journal/computer-speech-and-language"},
+        {"name": "Speech Communication", "url": "https://www.sciencedirect.com/journal/speech-communication"}
       ]
     },
     {
