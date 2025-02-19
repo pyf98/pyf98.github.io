@@ -23,7 +23,9 @@ In Summer 2024, I was an AI Research Intern at [NVIDIA](https://www.nvidia.com/e
 
 My research area is speech and language processing. My Ph.D. thesis is to develop effective and efficient open speech foundation models. I have led the project of [Open Whisper-style Speech Models (OWSM)](https://www.wavlab.org/activities/2024/owsm/) at [CMU WAVLab](https://www.wavlab.org/), developing the first large-scale, fully open speech foundation model from academia. Now I am interested in integrating speech capabilities into large language models. Most of my works are open sourced in a widely-used speech processing toolkit, [ESPnet](https://github.com/espnet/espnet).
 
-I published first-authored papers at top-tier AI/speech conferences, such as ICML, ACL, ICASSP, and INTERSPEECH. Several projects that I'm involved in received notable recognition, including the Best Paper Award at SLT 2024, Best Paper Award at EMNLP 2024, Top 3% Paper Recognition at ICASSP 2023 (3 papers), and Best Student Paper Award Finalist at SPIE Medical Imaging 2020. Specifically, I have been the primary contributor to several major projects:
+I published first-authored papers at top-tier AI/speech conferences, such as ICML, ACL, NAACL, ICASSP, and INTERSPEECH. Several projects that I was involved in received notable recognition, including [EMNLP 2024 Best Paper Award](https://2024.emnlp.org/program/best_papers/), IEEE SLT 2024 Best Paper Award, [ICASSP 2023 Top 3% Paper Recognition (3 papers)](https://2023.ieeeicassp.org/top-3-percent-paper-recognitions/), and SPIE Medical Imaging 2020 Best Student Paper Award Finalist.
+
+I have been the primary contributor to several major projects:
 
 - Novel speech encoder architecture: [Branchformer (ICML'22)](https://proceedings.mlr.press/v162/peng22a.html), [E-Branchformer vs Conformer (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23b_interspeech.pdf)
 - Speech model compression: [I3D (ICASSP'23 Top 3%)](https://arxiv.org/abs/2303.07624), [HJ-Pruning (ICASSP'23 Top 3%)](https://arxiv.org/abs/2302.14132), [DPHuBERT (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23c_interspeech.html)
