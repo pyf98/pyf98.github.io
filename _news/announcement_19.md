@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:scroll: A co-authored paper is accepted at ICLR 2025. It extends my previous compression method, [I3D](https://ieeexplore.ieee.org/abstract/document/10096662), to our open foundation model, [OWSM](https://www.wavlab.org/activities/2024/owsm/)
+:scroll: A co-authored paper is accepted at ICLR 2025. It extends my previous compression method, [I3D](https://arxiv.org/abs/2303.07624), to our open foundation model, [OWSM](https://www.wavlab.org/activities/2024/owsm/)
