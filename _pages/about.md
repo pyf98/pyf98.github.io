@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <strong>PhD Candidate, Carnegie Mellon University</strong>
+subtitle: <strong>PhD, Carnegie Mellon University</strong>
 
 profile:
   align: right
