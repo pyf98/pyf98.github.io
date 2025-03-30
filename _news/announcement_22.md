@@ -14,4 +14,4 @@ My thesis committee members are:
 - Prof. Bhiksha Ramakrishnan, CMU
 - Prof. Karen Livescu, CMU
 
-![Defense](assets/img/defense.jpg)
+![Defense](/assets/img/defense.jpg)
