@@ -6,9 +6,8 @@ inline: false
 related_posts: false
 ---
 
-:mortar_board: This morning, I successfully defended my PhD thesis at Carnegie Mellon University! 
+:mortar_board: This morning, I successfully defended my PhD thesis at Carnegie Mellon University!
 My thesis title is "Towards Effective and Efficient Open Speech Foundation Models".
-
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
