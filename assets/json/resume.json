@@ -87,16 +87,17 @@
     {
       "role": "Conference reviewer",
       "items": [
-        {"name": "ACL: 2024 (ARR Feb 2024)"},
+        {"name": "ACL: 2024 (ARR Feb 2024), 2025 (ARR Feb 2025)"},
         {"name": "EMNLP: 2023, 2024 (ARR Jun 2024)"},
         {"name": "NAACL: 2024 (ARR Dec 2023), 2025 (ARR Oct 2024)"},
         {"name": "ICASSP: 2023, 2024, 2025"},
-        {"name": "INTERSPEECH: 2024"},
+        {"name": "INTERSPEECH: 2024, 2025"},
         {"name": "SLT: 2022, 2024"},
         {"name": "ASRU: 2023"},
         {"name": "IJCNN: 2025"},
         {"name": "SynData4GenAI: 2024"},
-        {"name": "WiNLP: 2024"}
+        {"name": "WiNLP: 2024"},
+        {"name": "EUSIPCO: 2025"}
       ]
     },
     {
