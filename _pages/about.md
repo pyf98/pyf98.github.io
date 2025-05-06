@@ -25,9 +25,9 @@ My research area is speech and language processing. My Ph.D. thesis is to develo
 
 I published first-authored papers at top-tier AI/speech conferences, such as ICML, ACL, NAACL, ICASSP, and INTERSPEECH. Several projects that I was involved in received notable recognition, including [EMNLP 2024 Best Paper Award](https://2024.emnlp.org/program/best_papers/), IEEE SLT 2024 Best Paper Award, [ICASSP 2023 Top 3% Paper Recognition (3 papers)](https://2023.ieeeicassp.org/top-3-percent-paper-recognitions/), and SPIE Medical Imaging 2020 Best Student Paper Award Finalist.
 
-I have been the primary contributor to several major projects:
+I have been the primary contributor to several projects:
 
-- Novel speech encoder architecture: [Branchformer (ICML'22)](https://proceedings.mlr.press/v162/peng22a.html), [E-Branchformer vs Conformer (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23b_interspeech.pdf)
+- Speech encoder architecture design: [Branchformer (ICML'22)](https://proceedings.mlr.press/v162/peng22a.html), [E-Branchformer vs Conformer (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23b_interspeech.pdf)
 - Speech model compression: [I3D (ICASSP'23 Top 3%)](https://arxiv.org/abs/2303.07624), [HJ-Pruning (ICASSP'23 Top 3%)](https://arxiv.org/abs/2302.14132), [DPHuBERT (INTERSPEECH'23)](https://www.isca-archive.org/interspeech_2023/peng23c_interspeech.html)
 - Open speech foundation models: [OWSM (ASRU'23)](https://arxiv.org/abs/2309.13876), [OWSM v3.1 (INTERSPEECH'24)](https://arxiv.org/abs/2401.16658), [OWSM-CTC (ACL'24)](https://aclanthology.org/2024.acl-long.549/)
-- Speech language models: [SpeechLM analysis](https://arxiv.org/abs/2403.12402), [MSLM-S2ST](https://arxiv.org/abs/2403.12408), [VoiceTextBlender (NAACL'25)](https://arxiv.org/abs/2410.17485), and more to follow
+- Speech language models: [SpeechLM analysis](https://arxiv.org/abs/2403.12402), [MSLM-S2ST](https://arxiv.org/abs/2403.12408), [VoiceTextBlender (NAACL'25)](https://arxiv.org/abs/2410.17485), [SLM Survey](https://arxiv.org/abs/2504.08528)
