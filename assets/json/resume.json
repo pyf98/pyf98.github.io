@@ -8,7 +8,7 @@
       "url": "https://www.nvidia.com/en-us/",
       "startDate": "2025-06",
       "endDate": "Present",
-      "topic": "Multimodal large language models, full-duplex speech-to-speech models"
+      "topic": "NVIDIA Nemotron multimodal LLMs, full-duplex speech-to-speech models"
     },
     {
       "name": "NVIDIA NeMo",
@@ -21,14 +21,14 @@
       "topic": "Speech-text language models with multi-turn mixed-modal chat capabilities"
     },
     {
-      "name": "Meta AI (Fundamental AI Research, FAIR)",
+      "name": "Meta Fundamental AI Research (FAIR)",
       "position": "Research Scientist Intern",
       "location": "Seattle, WA, USA",
       "image": "meta.jpeg",
       "url": "https://ai.meta.com/",
       "startDate": "2023-05",
       "endDate": "2023-08",
-      "topic": "Speech large language models for voice-preserved textless speech-to-speech translation"
+      "topic": "Speech LLMs for voice-preserved textless speech-to-speech translation"
     },
     {
       "name": "ASAPP",
@@ -136,7 +136,7 @@
         {"name": "EMNLP: 2023, 2024 (ARR Jun 2024)"},
         {"name": "NAACL: 2024 (ARR Dec 2023), 2025 (ARR Oct 2024)"},
         {"name": "AAAI: 2025"},
-        {"name": "ICASSP: 2023, 2024, 2025"},
+        {"name": "ICASSP: 2023, 2024, 2025, 2026"},
         {"name": "INTERSPEECH: 2024, 2025"},
         {"name": "SLT: 2022, 2024"},
         {"name": "ASRU: 2023, 2025"},
