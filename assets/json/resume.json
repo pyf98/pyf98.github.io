@@ -1,17 +1,27 @@
 {
   "work": [
     {
-      "name": "NVIDIA NeMo",
+      "name": "NVIDIA",
+      "position": "Senior Research Scientist",
+      "location": "Santa Clara, CA, USA",
+      "image": "nvidia.jpeg",
+      "url": "https://www.nvidia.com/en-us/",
+      "startDate": "2026-03",
+      "endDate": "Present",
+      "topic": "Multimodal Nemotron LLMs, Nemotron VoiceChat (full-duplex speech-to-speech LLMs)"
+    },
+    {
+      "name": "NVIDIA",
       "position": "Research Scientist",
       "location": "Santa Clara, CA, USA",
       "image": "nvidia.jpeg",
       "url": "https://www.nvidia.com/en-us/",
       "startDate": "2025-06",
-      "endDate": "Present",
-      "topic": "NVIDIA Nemotron multimodal LLMs, full-duplex speech-to-speech models"
+      "endDate": "2026-02",
+      "topic": "Multimodal Nemotron LLMs, Nemotron VoiceChat (full-duplex speech-to-speech LLMs)"
     },
     {
-      "name": "NVIDIA NeMo",
+      "name": "NVIDIA",
       "position": "AI Research Intern",
       "location": "Santa Clara, CA, USA",
       "image": "nvidia.jpeg",
