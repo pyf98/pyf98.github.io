@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 
 <!-- ⭐ <span style="color: red; font-weight: bold;">Now seeking full-time positions in speech and language processing</span> ⭐ -->
 
-I am a Senior Research Scientist at NVIDIA, working on multimodal [Nemotron](https://developer.nvidia.com/nemotron). I received my Ph.D. from [Carnegie Mellon University](https://www.cmu.edu/) in 2025, supervised by Prof. [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe). Prior to that, I received my bachelor's degree from [Tsinghua University](https://www.tsinghua.edu.cn/en/) in 2020.
+I am a Senior Research Scientist at NVIDIA, working on multimodal LLMs (Nemotron-Omni) and full-duplex voice agents (Nemotron-VoiceChat). I received my Ph.D. from [Carnegie Mellon University](https://www.cmu.edu/) in 2025, supervised by Prof. [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe). Prior to that, I received my bachelor's degree from [Tsinghua University](https://www.tsinghua.edu.cn/en/) in 2020.
 During my Ph.D., I interned at NVIDIA, Meta FAIR, and ASAPP.
 <!-- In Summer 2024, I was an AI Research Intern at [NVIDIA](https://www.nvidia.com/en-us/) NeMo, where I worked on joint speech-text language models. In Summer 2023, I was a research scientist intern at [Meta AI](https://ai.meta.com/) FAIR and worked on speech language models for voice-preserved textless speech-to-speech translation. In Summer 2022, I worked as a speech recognition intern at [ASAPP](https://www.asapp.com/) about speech model compression. -->
 
