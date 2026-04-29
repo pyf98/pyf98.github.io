@@ -10,7 +10,7 @@ nav_order: 2
 <!-- _pages/publications.md -->
 
 I have published papers in several research areas:
-- Speech Foundation Model (SFM)
+- Foundation Model
 - Speech Model Architecture
 - Efficient Speech Models
 - Speech Applications
