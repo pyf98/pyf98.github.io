@@ -25,6 +25,12 @@
 "ICLR":
   color: "#f79292"
 
+"NeurIPS":
+  color: "#f79292"
+
+"NeurIPS Workshop":
+  color: "#f79292"
+
 "ICASSP":
   color: "#89f2fa"
 
