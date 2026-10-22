@@ -2,6 +2,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Installing and Deploying](#installing-and-deploying)
+  - [Local preview for this repository (macOS)](#local-preview-for-this-repository-macos)
   - [Recommended Approach](#recommended-approach)
   - [Local setup on Windows](#local-setup-on-windows)
   - [Local setup using Docker (Recommended)](#local-setup-using-docker-recommended)
@@ -18,6 +19,44 @@
   - [Upgrading from a previous version](#upgrading-from-a-previous-version)
 
 # Installing and Deploying
+
+## Local preview for this repository (macOS)
+
+Install the native tools with Homebrew. Ruby 3.2 matches the runtime series used by this repository's deployment workflow.
+
+```bash
+brew install ruby@3.2 imagemagick python@3.13
+```
+
+From the repository root, install the Ruby gems and Python dependencies into the ignored `vendor/` directory:
+
+```bash
+export PATH="$(brew --prefix)/opt/ruby@3.2/bin:$PATH"
+export BUNDLE_USER_HOME="$PWD/.bundle"
+bundle config set --local path vendor/bundle
+bundle config set --local jobs 4
+bundle install
+"$(brew --prefix)/opt/python@3.13/bin/python3.13" -m venv vendor/venv
+vendor/venv/bin/python -m pip install -r requirements.txt
+```
+
+Start the preview:
+
+```bash
+./bin/preview
+```
+
+Open <http://127.0.0.1:4000>. Jekyll rebuilds when content or styles change, and LiveReload refreshes the browser. Restart the command after editing
+`_config.yml` or `_config.local.yml`. Press `Ctrl+C` to stop the server. To use another port, run `PORT=4001 ./bin/preview`.
+The launcher uses file polling so changes are detected reliably in sandboxed terminal sessions.
+
+The preview loads `_config.local.yml` after the main configuration. This disables external blog imports and live citation-count requests to keep
+rebuilds fast and independent of those services. GitHub Actions continues to build using `_config.yml` alone. To preview with the production settings,
+run `./bin/preview --config _config.yml`.
+
+The preview script selects the local Ruby and Python environment automatically, so no shell profile changes or manual activation are needed. Generated
+pages (`_site/`), dependencies (`vendor/`), Bundler settings (`.bundle/`), and the local `Gemfile.lock` are already ignored by Git. Previewing does not push
+or deploy anything.
 
 ## Recommended Approach
 

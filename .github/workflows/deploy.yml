@@ -79,11 +79,31 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          convert -version
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Verify profile images
+        run: |
+          bundle exec ruby -ryaml -rdate <<'RUBY'
+          config = YAML.load_file("_config.yml", permitted_classes: [Date])
+          about = YAML.safe_load(File.read("_pages/about.md").split(/^---\s*$/, 3)[1])
+          original = File.join("_site/assets/img", about.fetch("profile").fetch("image"))
+          images = [original]
+          if config.dig("imagemagick", "enabled")
+            stem = original.delete_suffix(File.extname(original))
+            images.concat(config.fetch("imagemagick").fetch("widths").map { |width| "#{stem}#{width.zero? ? '' : "-#{width}"}.webp" })
+          end
+          missing = images.reject { |path| File.size?(path) }
+          abort "Missing profile images: #{missing.join(', ')}" unless missing.empty?
+          puts "Verified #{images.length} profile images."
+          RUBY
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

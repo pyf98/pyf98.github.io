@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$project_root"
+
+if command -v brew >/dev/null 2>&1; then
+  brew_prefix="$(brew --prefix)"
+  export PATH="$brew_prefix/opt/ruby@3.2/bin:$brew_prefix/bin:$PATH"
+fi
+export PATH="$project_root/vendor/venv/bin:$PATH"
+export BUNDLE_USER_HOME="$project_root/.bundle"
+export JEKYLL_ENV="${JEKYLL_ENV:-development}"
+
+if ! command -v bundle >/dev/null 2>&1 || ! bundle check >/dev/null 2>&1; then
+  printf '%s\n' 'Ruby dependencies are missing. Follow the local preview setup in INSTALL.md.' >&2
+  exit 1
+fi
+if [[ ! -x "$project_root/vendor/venv/bin/jupyter" ]] || ! command -v magick >/dev/null 2>&1; then
+  printf '%s\n' 'Python or ImageMagick dependencies are missing. Follow the local preview setup in INSTALL.md.' >&2
+  exit 1
+fi
+
+exec bundle exec jekyll serve \
+  --config _config.yml,_config.local.yml \
+  --host 127.0.0.1 \
+  --port "${PORT:-4000}" \
+  --force_polling \
+  --livereload \
+  --livereload-port "${LIVERELOAD_PORT:-35729}" \
+  "$@"
