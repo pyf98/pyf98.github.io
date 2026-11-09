@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:man_office_worker: Joining NVIDIA NeMo Speech in Santa Clara as AI Research Intern
+:man_office_worker: Joining NVIDIA NeMo Speech team in Santa Clara as AI Research Intern

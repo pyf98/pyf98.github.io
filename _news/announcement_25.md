@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:scroll: Six papers are accepted at INTERSPEECH 2025, including the latest [OWSM v4 series](https://huggingface.co/espnet/owsm_ctc_v4_1B#owsm-series)
+:scroll: Six papers are accepted at INTERSPEECH 2025, including the [OWSM v4 series](https://huggingface.co/espnet/owsm_ctc_v4_1B#owsm-series)

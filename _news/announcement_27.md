@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:scroll: A first-authored survey paper, [On The Landscape of Spoken Language Models: A Comprehensive Survey](https://arxiv.org/abs/2504.08528), is accepted at *Transactions on Machine Learning Research (TMLR)*
+:scroll: A first-authored survey paper, [On The Landscape of Spoken Language Models: A Comprehensive Survey](https://arxiv.org/abs/2504.08528), is accepted at TMLR

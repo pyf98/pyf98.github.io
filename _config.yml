@@ -638,6 +638,7 @@ jekyll_get_json:
 jsonresume:
   - basics
   - work
+  - internships
   - education
   - publications
   - projects

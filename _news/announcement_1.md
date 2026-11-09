@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:scroll: 1 first-authored paper is accepted at ICML 2022
+:scroll: 1 first-authored paper, [Branchformer](https://proceedings.mlr.press/v162/peng22a/peng22a.pdf) is accepted at ICML 2022
