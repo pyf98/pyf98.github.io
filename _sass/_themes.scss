@@ -206,3 +206,10 @@ html[data-theme-setting="light"] {
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
+
+// Bootstrap compatibility hides .collapse even when the desktop menu is expanded.
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-collapse-main {
+    visibility: visible;
+  }
+}
