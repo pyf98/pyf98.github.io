@@ -56,9 +56,20 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+    inputs:
+      refresh_citations:
+        description: Refresh Google Scholar counts before publishing
+        type: boolean
+        default: false
+  schedule:
+    - cron: "17 9 * * 1"
 
 permissions:
   contents: write
+
+concurrency:
+  group: deploy-site-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -72,6 +83,21 @@ jobs:
         with:
           ruby-version: "3.2.11"
           bundler-cache: true
+      - name: Refresh Google Scholar citation counts
+        if: >-
+          (github.event_name == 'schedule' || inputs.refresh_citations) &&
+          github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          if ! bundle exec ruby bin/update_scholar_citations.rb; then
+            echo "::warning::Google Scholar refresh failed. Publishing the saved citation counts."
+            exit 0
+          fi
+          git add -- _data/scholar_citations.yml
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Refresh Google Scholar citation counts'
+            git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
+          fi
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:

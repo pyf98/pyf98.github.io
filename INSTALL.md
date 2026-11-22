@@ -50,9 +50,14 @@ Open <http://127.0.0.1:4000>. Jekyll rebuilds when content or styles change, and
 `_config.yml` or `_config.local.yml`. Press `Ctrl+C` to stop the server. To use another port, run `PORT=4001 ./bin/preview`.
 The launcher uses file polling so changes are detected reliably in sandboxed terminal sessions.
 
-The preview loads `_config.local.yml` after the main configuration. This disables external blog imports and live citation-count requests to keep
-rebuilds fast and independent of those services. GitHub Actions continues to build using `_config.yml` alone. To preview with the production settings,
+The preview loads `_config.local.yml` after the main configuration. This disables external blog imports and live InspireHEP requests.
+Google Scholar badges use the saved counts in `_data/scholar_citations.yml` in both local and production builds. To preview with the production settings,
 run `./bin/preview --config _config.yml`.
+
+The deployment workflow refreshes Google Scholar counts every Monday. You can also select **Refresh Google Scholar counts before publishing** when
+running **Deploy site** on the default branch, or run `bundle exec ruby bin/update_scholar_citations.rb` locally. It reads the first 100 papers on
+the public profile and matches the `google_scholar_id` in each bibliography entry. A missing or unreadable count keeps its last verified value.
+Papers with no verified count have no Scholar badge.
 
 The preview script selects the local Ruby and Python environment automatically, so no shell profile changes or manual activation are needed. Generated
 pages (`_site/`), dependencies (`vendor/`), Bundler settings (`.bundle/`), and the local `Gemfile.lock` are already ignored by Git. Previewing does not push

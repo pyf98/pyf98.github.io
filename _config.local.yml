@@ -1,6 +1,5 @@
 # Local preview overrides. GitHub Actions builds with _config.yml alone.
-# Keep rebuilds independent of external feeds and citation-count services.
+# Google Scholar badges use the same saved counts as the public site.
 external_sources: []
 enable_publication_badges:
-  google_scholar: false
   inspirehep: false
