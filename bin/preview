@@ -13,11 +13,11 @@ export BUNDLE_USER_HOME="$project_root/.bundle"
 export JEKYLL_ENV="${JEKYLL_ENV:-development}"
 
 if ! command -v bundle >/dev/null 2>&1 || ! bundle check >/dev/null 2>&1; then
-  printf '%s\n' 'Ruby dependencies are missing. Follow the local preview setup in INSTALL.md.' >&2
+  printf '%s\n' 'Ruby dependencies are missing. Follow the local preview setup in docs/INSTALL.md.' >&2
   exit 1
 fi
 if [[ ! -x "$project_root/vendor/venv/bin/jupyter" ]] || ! command -v magick >/dev/null 2>&1; then
-  printf '%s\n' 'Python or ImageMagick dependencies are missing. Follow the local preview setup in INSTALL.md.' >&2
+  printf '%s\n' 'Python or ImageMagick dependencies are missing. Follow the local preview setup in docs/INSTALL.md.' >&2
   exit 1
 fi
 

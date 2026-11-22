@@ -43,7 +43,7 @@ end
 
 if $PROGRAM_NAME == __FILE__
   config = YAML.safe_load_file("_config.yml", permitted_classes: [Date])
-  author_id = config.fetch("scholar_userid")
+  author_id = YAML.safe_load_file("_data/socials.yml").fetch("scholar_userid")
   scholar = config.fetch("scholar")
   bibliography = BibTeX.open(File.join(".", scholar.fetch("source"), scholar.fetch("bibliography")))
   paper_ids = bibliography.entries.values.filter_map { |entry| entry[:google_scholar_id]&.to_s }.uniq
