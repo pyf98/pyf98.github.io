@@ -214,6 +214,29 @@ html[data-theme-setting="light"] {
   }
 }
 
+[role="main"] > .row:has(.cv) {
+  > .col-sm-3 {
+    flex: 0 0 8rem;
+    max-width: none;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  > .col-sm-9 {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+  }
+
+  // Keep the section markers inside their links so they do not trigger a scrollbar.
+  #toc-sidebar .toc-link::before {
+    top: 0;
+    margin-top: 0;
+  }
+}
+
 .cv-award {
   display: grid;
   grid-template-columns: clamp(4.75rem, 16vw, 8rem) minmax(0, 1fr);
