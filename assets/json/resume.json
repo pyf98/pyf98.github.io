@@ -87,6 +87,7 @@
   "awards": [
     {
       "title": "INTERSPEECH 2025 Best Student Paper Award",
+      "image": "awards/interspeech-2025.jpg",
       "date": "2025-8-21",
       "awarder": "International Speech Communication Association (ISCA)",
       "url": "https://isca-speech.org/ISCA-Awards",
@@ -94,12 +95,14 @@
     },
     {
       "title": "IEEE SLT 2024 Best Paper Award",
+      "image": "awards/slt-2024.jpg",
       "date": "2024-12-4",
       "awarder": "2024 IEEE Spoken Language Technology Workshop",
       "summary": "For the paper: Contextualized Automatic Speech Recognition with Dynamic Vocabulary"
     },
     {
       "title": "EMNLP 2024 Best Paper Award",
+      "image": "awards/emnlp-2024.jpg",
       "date": "2024-11-14",
       "awarder": "The 2024 Conference on Empirical Methods in Natural Language Processing",
       "url": "https://2024.emnlp.org/program/best_papers/",
@@ -107,6 +110,8 @@
     },
     {
       "title": "ICASSP 2023 Top 3% Paper Recognition",
+      "image": "awards/icassp-2023.png",
+      "imageAlt": "View the three ICASSP 2023 certificates. I3D and Structured Pruning are in the top row. Improving Massively Multilingual ASR is centered below.",
       "date": "2023-6-10",
       "awarder": "IEEE International Conference on Acoustics, Speech and Signal Processing",
       "url": "https://2023.ieeeicassp.org/top-3-percent-paper-recognitions/",
@@ -114,6 +119,7 @@
     },
     {
       "title": "SPIE Medical Imaging 2020 Best Student Paper Award Finalist",
+      "image": "awards/spie-2020.png",
       "date": "2020-2-20",
       "awarder": "The International Society for Optics and Photonics (SPIE)",
       "summary": "For first-authored paper: Microcalcification localization and cluster detection using unsupervised convolutional autoencoders and structural similarity index"
