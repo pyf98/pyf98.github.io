@@ -25,6 +25,26 @@ class ScholarCitationsTest < Minitest::Test
                  YAML.safe_load_file(@path).fetch("yifan"))
   end
 
+  def test_confirms_uncited_papers_using_the_complete_profile_including_unlisted_papers
+    rows = row("yifan:new", "", href: "") + row("yifan:unlisted", "1,234")
+    html = profile(rows, total: "1,234")
+    capture_io { update_scholar_cache(html, author_id: "yifan", paper_ids: ["new"], path: @path) }
+    assert_equal({ "new" => 0, "missing" => 9, "blank" => 4 }, YAML.safe_load_file(@path).fetch("yifan"))
+  end
+
+  def test_unconfirmed_empty_counts_preserve_the_cache
+    rows = row("yifan:blank", "", href: "") + row("yifan:paper", "7")
+    pages = [
+      profile(rows, total: "8"),
+      profile(rows, total: "7", more: true),
+      profile(rows + row("yifan:unknown", "N/A"), total: "7")
+    ]
+    pages.each do |html|
+      capture_io { update_scholar_cache(html, author_id: "yifan", paper_ids: %w[blank paper unknown], path: @path) }
+      assert_equal({ "missing" => 9, "blank" => 4, "paper" => 7 }, YAML.safe_load_file(@path).fetch("yifan"))
+    end
+  end
+
   def test_block_page_cannot_overwrite_last_successful_snapshot
     previous = File.read(@path)
     assert_raises(RuntimeError) do
@@ -36,11 +56,18 @@ class ScholarCitationsTest < Minitest::Test
 
   private
 
-  def row(key, count)
+  def profile(rows, total:, more: false)
+    <<~HTML
+      <table id="gsc_rsb_st"><tr><td>Citations</td><td>#{total}</td><td>3</td></tr></table>
+      <table>#{rows}</table><button id="gsc_bpf_more" #{'disabled' unless more}>Show more</button>
+    HTML
+  end
+
+  def row(key, count, href: "/scholar?cites=1")
     <<~HTML
       <tr class="gsc_a_tr">
         <td><a class="gsc_a_at" href="/citations?view_op=view_citation&amp;citation_for_view=#{key}">Paper</a></td>
-        <td class="gsc_a_c"><a class="gsc_a_ac">#{count}</a></td>
+        <td class="gsc_a_c"><a class="gsc_a_ac" href="#{href}">#{count}</a></td>
       </tr>
     HTML
   end

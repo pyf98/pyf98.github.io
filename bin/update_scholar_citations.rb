@@ -7,22 +7,43 @@ require "open-uri"
 require "tempfile"
 require "yaml"
 
-def update_scholar_cache(html, author_id:, paper_ids:, path:)
-  verified = {}
-  Nokogiri::HTML(html).css("tr.gsc_a_tr").each do |row|
+def parse_scholar_count(text)
+  digits = text.to_s.strip
+  Integer(digits.delete(","), 10) if digits.match?(/\A(?:\d+|\d{1,3}(?:,\d{3})+)\z/)
+end
+
+def scholar_profile_counts(html, author_id)
+  profile = Nokogiri::HTML(html)
+  rows = profile.css("tr.gsc_a_tr")
+  counts = {}
+  rows.each do |row|
     href = row.at_css("a.gsc_a_at[href]")&.[]("href")
     next unless href
 
     query = URI.decode_www_form(URI.parse(href).query.to_s).to_h
     owner, paper_id = query["citation_for_view"].to_s.split(":", 2)
-    next unless owner == author_id && paper_ids.include?(paper_id)
+    next unless owner == author_id && !paper_id.to_s.empty?
 
-    count = row.at_css("td.gsc_a_c a.gsc_a_ac")&.text.to_s.strip
-    next unless count.match?(/\A(?:\d+|\d{1,3}(?:,\d{3})+)\z/)
+    link = row.at_css("td.gsc_a_c a.gsc_a_ac")
+    next unless link
 
-    verified[paper_id] = Integer(count.delete(","), 10)
+    label = link.text.strip
+    count = parse_scholar_count(label)
+    counts[paper_id] = count if count || (label.empty? && link["href"] == "")
   end
-  raise "Google Scholar returned no numeric counts for the configured papers" if verified.empty?
+
+  # Scholar leaves an uncited paper's count and link empty. Confirm those zeros
+  # only when every row is accounted for and the counts add up to the all-time total.
+  total = profile.at_xpath("//table[@id='gsc_rsb_st']//tr[normalize-space(td[1])='Citations']/td[2]")
+  if profile.at_css("#gsc_bpf_more[disabled]") && counts.size == rows.size && counts.values.compact.sum == parse_scholar_count(total&.text)
+    counts.transform_values! { |count| count || 0 }
+  end
+  counts.compact
+end
+
+def update_scholar_cache(html, author_id:, paper_ids:, path:)
+  verified = scholar_profile_counts(html, author_id).slice(*paper_ids)
+  raise "Google Scholar returned no verified counts for the configured papers" if verified.empty?
 
   cache = File.exist?(path) ? YAML.safe_load_file(path) : {}
   previous = cache.fetch(author_id, {})

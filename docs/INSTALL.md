@@ -70,8 +70,9 @@ run `./bin/preview --config _config.yml`.
 
 The deployment workflow refreshes Google Scholar counts every Monday. You can also select **Refresh Google Scholar counts before publishing** when
 running **Deploy site** on the default branch, or run `bundle exec ruby bin/update_scholar_citations.rb` locally. It reads the first 100 papers on
-the public profile and matches the `google_scholar_id` in each bibliography entry. A missing or unreadable count keeps its last verified value.
-Papers with no verified count have no Scholar badge.
+the public profile and matches the `google_scholar_id` in each bibliography entry. An empty citation link counts as zero only when the complete
+profile's paper counts add up to its all-time citation total. Missing or unreadable counts keep their last verified values. A Scholar badge appears
+when a paper's verified count meets or exceeds `scholar_badge_threshold` in `_layouts/bib.liquid`.
 
 The preview script selects the local Ruby and Python environment automatically, so no shell profile changes or manual activation are needed. Generated
 pages (`_site/`), dependencies (`vendor/`), Bundler settings (`.bundle/`), and Node packages (`node_modules/`) are already ignored by Git. Previewing does not push
