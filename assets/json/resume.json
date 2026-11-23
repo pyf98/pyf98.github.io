@@ -64,7 +64,7 @@
       "endDate": "2025-05",
       "score": "10",
       "advisor": "Prof. Shinji Watanabe",
-      "advisorUrl": "https://sites.google.com/view/shinjiwatanabe",
+      "advisorUrl": "https://sw005320.github.io/",
       "research": "Speech foundation models, speech recognition",
       "thesis": "Towards effective and efficient open speech foundation models",
       "openSource": "Contributor and maintainer of ESPnet"
