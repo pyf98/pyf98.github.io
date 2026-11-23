@@ -1,10 +1,8 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for content in data[1] %}
-    {% assign award_url = content.url %}
     {% if content.image %}
       {% assign image_path = content.image | prepend: 'assets/img/' %}
       {% assign image_url = image_path | relative_url %}
-      {% assign award_url = award_url | default: image_url %}
       {% capture image_alt %}View the {{ content.title }} certificate{% endcapture %}
       {% assign image_alt = content.imageAlt | default: image_alt | escape %}
     {% endif %}
@@ -15,14 +13,22 @@
             <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ content.date | replace: '-', '.' }}</span>
           {% endif %}
           {% if content.image %}
-            <a href="{{ image_url }}">
+            <a href="{{ image_url }}" data-lightbox="award-{{ forloop.index }}" data-title="{{ content.title | escape }}" aria-haspopup="dialog">
               {% include figure.liquid path=image_path alt=image_alt width=128 height=104 sizes='(max-width: 475px) 76px, (max-width: 800px) 16vw, 128px' %}
             </a>
           {% endif %}
         </div>
         <div>
           <h6 class="title font-weight-bold">
-            {% if award_url %}<a href="{{ award_url }}">{{ content.title }}</a>{% else %}{{ content.title }}{% endif %}
+            {% if content.url %}
+              <a href="{{ content.url }}">{{ content.title }}</a>
+            {% elsif content.image %}
+              <a href="{{ image_url }}" data-lightbox="award-title-{{ forloop.index }}" data-title="{{ content.title | escape }}" aria-haspopup="dialog">
+                {{- content.title -}}
+              </a>
+            {% else %}
+              {{ content.title }}
+            {% endif %}
           </h6>
           <h6 style="font-size: 0.95rem">{{ content.awarder }}</h6>
           <h6 style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>

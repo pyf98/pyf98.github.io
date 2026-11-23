@@ -243,3 +243,18 @@ html[data-theme-setting="light"] {
     object-position: top center;
   }
 }
+
+body:has(.cv-award) .al-lightbox-overlay {
+  .al-lightbox-nav:disabled {
+    display: none;
+  }
+
+  // Clicks in the empty margins of the figure should reach the backdrop.
+  .al-lightbox-figure {
+    pointer-events: none;
+  }
+
+  .al-lightbox-image {
+    pointer-events: auto;
+  }
+}
