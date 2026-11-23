@@ -213,3 +213,20 @@ html[data-theme-setting="light"] {
     visibility: visible;
   }
 }
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand.title {
+  font-family: Newsreader, "Iowan Old Style", Palatino, Georgia, serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-weight: 400;
+}
