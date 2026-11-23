@@ -288,7 +288,7 @@
       {% if entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or scholar_count > scholar_badge_threshold or entry_has_inspirehep_badge %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or scholar_count >= scholar_badge_threshold or entry_has_inspirehep_badge %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -325,7 +325,7 @@
               style="margin-bottom: 3px;"
             ></span>
           {% endif %}
-          {% if scholar_count > scholar_badge_threshold %}
+          {% if scholar_count >= scholar_badge_threshold %}
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
               aria-label="{{ scholar_count }} citations on Google Scholar"
